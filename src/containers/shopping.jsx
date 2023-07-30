@@ -5,6 +5,7 @@ import Modal from "../components/UI-element/Modal/Modal";
 import Order from "../components/Order/Order";
 import axios from '../components/axios-orders';
 import Loader from '../components/UI-element/Loader/Loader'
+import { useNavigate } from "react-router-dom";
 
 const price = {
     product1: 59,
@@ -67,7 +68,14 @@ const Shopping = (props) => {
     const modalHandler = () => {
         setPurchased(false)
     }
+
+    const navigate = useNavigate()
+
     const purchaseContinueHandler = () => {
+        
+
+        navigate('/checkout')
+
         setLoader(true)
         const order = {
             products: stateProducts.products,

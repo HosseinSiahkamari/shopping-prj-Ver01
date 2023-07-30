@@ -1,13 +1,13 @@
 
 import './NavItem.css'
+import { Link } from 'react-router-dom';
 
 const NavItem = (props) => {
-    return ( 
+    return (
         <li className='nav-item'>
-            <a href={props.link}>{props.children} </a>
-
+            <Link to={props.to}>{props.children} </Link>
         </li>
-     );
+    );
 }
- 
+
 export default NavItem;

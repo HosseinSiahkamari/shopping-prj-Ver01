@@ -3,13 +3,12 @@ import './NavItems.css'
 import NavItem from './NavItem';
 
 const NavItems = () => {
-    return ( 
+    return (
         <ul className="nav-items">
-            <NavItem link='/'>shopping</NavItem>
-            <NavItem link='/'>check out</NavItem>
-
+            <NavItem to='/'>shopping</NavItem>
+            <NavItem to='/account'>Account</NavItem>
         </ul>
-     );
+    );
 }
- 
+
 export default NavItems;
